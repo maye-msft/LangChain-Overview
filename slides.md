@@ -220,6 +220,7 @@ question = "what is the calories value of apple per 100 grams?"
 print("Q2: "question+"\n"+multi_prompt_chain.run(input=question))
 ```
 <hr>
+
 ```text
 The result is:
 Q1: what is the top fruit apple producing country?
@@ -257,6 +258,7 @@ output = extract_chain.run({"extract_instructions":"Get the calories number only
 
 ```
 <hr>
+
 ```text
 The result is:
 52
@@ -281,6 +283,7 @@ output = overall_chain.run(input="what is the calories value of apple per 100 gr
 print(output)
 ```
 <hr>
+
 ```text
 The result is:
 China
@@ -309,6 +312,7 @@ result = agent_chain.run(input="give me a short description of fruit apple")
 print(result)
 ```
 <hr>
+
 ```text
 the result is:
 Apples are a type of fruit that are grown in orchards and have been bred to contain more sugar.
@@ -328,13 +332,14 @@ for name in fruits_names:
     output = overall_chain.run(input=f"what is the calories value of {name} per 100 grams", 
                                extract_instructions="get the calories number only.")
     fruits_kalories.append(output_parser.parse(output)[0])
-    output = agent_chain.run(input="give me a short description of fruit {name}")
+    output = agent_chain.run(input=f"give me a short description of fruit {name}")
     fruits_desc.append(output)
 df = pd.DataFrame({"country": fruits_countries, "calories": fruits_kalories, "desc": fruits_desc}, 
                   index = fruits_names)
 print(df)
 ```
 <hr>
+
 ```text
 the result is:
            country calories                                               desc
@@ -358,6 +363,7 @@ print(csv_agent.run("which fruit with the lowest calories and what country produ
 
 ```
 <hr>
+
 ```text
 the result is:
 There are 5 rows in the dataframe.
