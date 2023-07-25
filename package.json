@@ -1,0 +1,19 @@
+{
+  "name": "langchain-overview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slidev/cli": "^0.42.5",
+    "@slidev/theme-default": "^0.21.2",
+    "@slidev/theme-seriph": "^0.21.3"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.36.1"
+  }
+}

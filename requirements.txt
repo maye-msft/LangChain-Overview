@@ -1,0 +1,9 @@
+langchain
+jupyterlab
+notebook
+python-dotenv
+openai
+pandas
+tabulate
+wikipedia
+duckduckgo-search
